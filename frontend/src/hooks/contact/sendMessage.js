@@ -1,6 +1,8 @@
+import config from "../../config/config.js";
+
 async function sendMessage(message){
     try {
-        const response = await fetch('/api/v1/contact', {
+        const response = await fetch(`${config.backendApiUrl}/api/v1/contact`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
